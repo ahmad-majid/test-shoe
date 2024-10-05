@@ -1,0 +1,93 @@
+.new-arrivals {
+    text-align: center;
+    margin-top: 40px; /* Add margin at the top */
+}
+
+.new-arrivals h2 {
+    font-size: 2.5rem; /* Large heading */
+    margin-bottom: 20px; /* Space below the heading */
+    color: #333; /* Heading color */
+    font-weight: bold; /* Bold font */
+    text-transform: uppercase; /* Uppercase letters */
+}
+
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for larger screens */
+    gap: 20px; /* Space between the cards */
+    justify-items: center; /* Center items within the grid */
+}
+
+.product-card {
+    width: 100%; /* Set to 100% to utilize grid space */
+    position: relative;
+    background-color: white; /* Optional background color */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Optional for image cropping */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for effect */
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.navigation-buttons {
+    margin-top: 20px; /* Space above the buttons */
+    display: flex;
+    justify-content: space-between; /* Space out buttons */
+    width: 100%; /* Full width for buttons */
+}
+
+.prev-button,
+.next-button {
+    background: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px; /* Optional padding for better click area */
+    transition: background 0.3s; /* Smooth background transition */
+}
+
+.prev-button:disabled,
+.next-button:disabled {
+    background: rgba(200, 200, 200, 0.7); /* Light gray for disabled */
+    cursor: not-allowed; /* Show not-allowed cursor */
+}
+
+.prev-button:hover:not(:disabled),
+.next-button:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 1); /* Solid on hover */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .products-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on medium screens */
+    }
+
+    .new-arrivals h2 {
+        font-size: 2rem; /* Smaller heading on medium screens */
+    }
+}
+
+@media (max-width: 900px) {
+    .products-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on small screens */
+    }
+
+    .new-arrivals h2 {
+        font-size: 1.75rem; /* Smaller heading on small screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .products-container {
+        grid-template-columns: 1fr; /* 1 column on extra small screens */
+    }
+
+    .new-arrivals h2 {
+        font-size: 1.5rem; /* Smaller heading on extra small screens */
+    }
+}

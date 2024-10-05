@@ -1,0 +1,149 @@
+/* Animation for fade-in and slide-up effect */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Slide up from 20px below */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End at normal position */
+    }
+}
+
+.unique-collections {
+    background-color: black;
+    color: white;
+    padding: 60px 20px;
+    text-align: left;
+    display: flex;
+    margin-top: 3rem;
+}
+
+.bg-layers {
+    position: relative;
+}
+
+.bg-media {
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+}
+
+.grid-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    z-index: 2;
+}
+
+.column-strip {
+    display: flex;
+    flex: 1;
+    margin: 10px;
+}
+
+.column {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.left-column {
+    flex: 1;
+}
+
+.right-column {
+    flex: 1;
+}
+
+/* Animation for Collection Title */
+.collection-title {
+    font-size: 64px;
+    margin-bottom: 10px;
+    animation: fadeInUp 1s ease-in-out; /* Apply fade-in and slide-up animation */
+    animation-delay: 0.2s; /* Delay animation for smoother effect */
+    opacity: 0; /* Start hidden */
+    animation-fill-mode: forwards; /* Keep the final state */
+}
+
+/* Animation for Collection Subtitle */
+.collection-subtitle {
+    font-size: 24px;
+    color: lightgray;
+    animation: fadeInUp 1s ease-in-out;
+    animation-delay: 0.4s; /* Subtitle animates after the title */
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.collection-description {
+    font-size: 16px;
+    margin: 20px 0;
+}
+
+.learn-more-button {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.learn-more-button:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .unique-collections {
+        flex-direction: column;
+        padding: 40px 10px;
+    }
+
+    .grid-container {
+        flex-direction: column;
+    }
+
+    .collection-title {
+        font-size: 48px;
+    }
+
+    .collection-subtitle {
+        font-size: 20px;
+    }
+
+    .collection-description {
+        font-size: 14px;
+    }
+
+    .learn-more-button {
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .collection-title {
+        font-size: 36px;
+    }
+
+    .collection-subtitle {
+        font-size: 18px;
+    }
+
+    .collection-description {
+        font-size: 12px;
+    }
+
+    .learn-more-button {
+        padding: 6px 12px;
+    }
+}

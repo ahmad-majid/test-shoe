@@ -1,0 +1,166 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff; /* White background */
+  color: #000; /* Black text color */
+  padding: 10px 20px;
+}
+
+.logo a {
+  color: #000; /* Black text color */
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links li a {
+  color: #000; /* Black text color */
+  text-decoration: none;
+  position: relative; /* For underline */
+}
+
+.nav-links li a:hover {
+  color: #008000; /* Green color on hover */
+}
+
+.contact-button {
+  background-color: #008000; /* Green background for contact button */
+  color: #fff; /* White text color */
+  padding: 10px 15px; /* Padding for button */
+  border-radius: 5px; /* Rounded corners */
+  text-decoration: none; /* Remove underline */
+}
+
+.contact-button:hover {
+  background-color: #005700; /* Darker green on hover */
+}
+
+.cart-container {
+  position: relative;
+}
+
+.cart-icon-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.cart-icon {
+  width: 24px; /* Adjust as per your icon size */
+  height: 24px; /* Adjust as per your icon size */
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px; /* Positioning it above the cart icon */
+  right: -8px; /* Align it to the right of the cart icon */
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  line-height: 1; /* Ensure the text is centered */
+  font-weight: bold; /* Make the count bold */
+  z-index: 2; /* Ensure it's on top of other elements */
+}
+
+.cart-dropdown {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+  padding: 10px;
+  min-width: 250px;
+  max-height: 300px; /* Set maximum height for scroll */
+  overflow-y: auto; /* Enable vertical scrollbar when content overflows */
+  z-index: 1;
+}
+
+.cart-dropdown p {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.cart-item-name {
+  font-weight: bold;
+}
+
+.cart-item-price {
+  margin-top: 5px;
+}
+
+.cart-item-count {
+  margin-top: 5px;
+  color: #666;
+}
+
+.remove-cart-item {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #f00;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.remove-cart-item:hover {
+  background-color: #f55;
+}
+
+.close-cart-button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.close-cart-button:hover {
+  background-color: #555;
+}
+
+.view-cart-link {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+  padding: 5px 0;
+  border-top: 1px solid #eee;
+}
+
+.view-cart-link:hover {
+  background-color: #f0f0f0;
+}
+
+.added-to-cart {
+  fill: red; /* Change color to red */
+}

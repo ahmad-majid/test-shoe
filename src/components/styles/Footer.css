@@ -1,0 +1,96 @@
+.sneaker-footer {
+  background-color: #f5f5f5;
+  padding: 40px 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-column {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.footer-logo img {
+  max-width: 100%;
+}
+
+.contact-information {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-text {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.nasa-nav-sc-menu-container {
+  list-style: none;
+  padding: 0;
+}
+
+.nasa-menu-wrapper {
+  font-size: 14px;
+  margin: 0;
+}
+
+.nasa-menu-wrapper a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  margin: 5px 0;
+}
+
+.nasa-menu-wrapper a:hover {
+  color: #007bff;
+}
+.subscribe{
+  display: flex;
+  justify-content: flex-end;
+  margin-right:1.4rem;
+  margin-bottom: 1.5rem;
+}
+.subscribe h3 {
+  font-size: 16px;
+  margin-top: 0.6rem;
+  margin-right: 1.2rem;
+  font-weight: bold;
+}
+
+.subscribe input[type="email"]
+{
+width: 100%;
+padding: 10px;
+margin-bottom: 10px;
+}
+.subscribe button {
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 50%;
+}
+
+.nasa-opening-time {
+  list-style: none;
+  padding: 0;
+}
+
+.nasa-day-open {
+  font-weight: bold;
+}
+
+.copyright-text {
+  font-size: 12px;
+  margin-top: 20px;
+  text-align: left;
+}
+

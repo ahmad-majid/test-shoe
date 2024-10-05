@@ -1,0 +1,112 @@
+#hero-section {
+    display: flex; /* Use flexbox for layout */
+    height: 100vh; /* Full height of the viewport */
+    overflow: hidden; /* Prevent overflow of content */
+}
+
+.content {
+    display: flex;
+    flex-direction: column; /* Stack text and image vertically */
+    justify-content: center; /* Center content vertically */
+    padding: 20px; /* Add padding as needed */
+    flex: 1; /* Allow content to take full height */
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: background color for readability */
+    opacity: 0; /* Start hidden */
+    animation: fadeIn 1s forwards; /* Fade-in animation */
+    animation-delay: 0.5s; /* Delay for the animation */
+}
+
+.bgLayers {
+    position: relative; /* Position for background image */
+    flex: 1; /* Allow background layers to take full height */
+    display: flex; /* Flexbox for layering */
+}
+
+.bgMedia {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.bgImage {
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    object-fit: cover; /* Cover the entire background */
+}
+
+.text-content {
+    margin-bottom: 20px; /* Space between title and image */
+}
+
+.hero-title {
+    font-size: 64px; /* Title font size */
+}
+
+.hero-subtitle {
+    font-size: 20px; /* Subtitle font size */
+}
+
+.image-content {
+    align-self: flex-start; /* Align image to the left */
+}
+
+.featured-image {
+    width: 240px; /* Adjust width as needed */
+    height: 320px; /* Adjust height as needed */
+    object-fit: cover; /* Maintain aspect ratio */
+}
+
+/* Fade-in and Scale-up animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Start fully transparent */
+        transform: translateY(20px) scale(0.8); /* Start slightly below and smaller */
+    }
+    100% {
+        opacity: 1; /* End fully visible */
+        transform: translateY(0) scale(1); /* End at original position and size */
+    }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    #hero-section {
+        flex-direction: column; /* Stack content and background vertically */
+        height: auto; /* Allow height to be dynamic */
+    }
+
+    .content {
+        padding: 10px; /* Adjust padding for mobile */
+        text-align: center; /* Center text on smaller screens */
+    }
+
+    .hero-title {
+        font-size: 48px; /* Reduce title font size */
+    }
+
+    .hero-subtitle {
+        font-size: 16px; /* Reduce subtitle font size */
+    }
+
+    .featured-image {
+        width: 100%; /* Full width on smaller screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 36px; /* Further reduce title font size */
+    }
+
+    .hero-subtitle {
+        font-size: 14px; /* Further reduce subtitle font size */
+    }
+
+    .featured-image {
+        width: 80%; /* Adjust width for very small screens */
+    }
+}

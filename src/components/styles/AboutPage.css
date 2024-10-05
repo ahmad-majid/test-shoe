@@ -1,0 +1,75 @@
+.about-page {
+  padding: 40px;
+  text-align: center; /* Center-align text */
+}
+
+.about-heading {
+  font-size: 48px;
+  margin-bottom: 40px;
+}
+
+.mission-section,
+.vision-section {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  margin: 40px 0; /* Add margin between sections */
+}
+
+.mission-content,
+.vision-content {
+  flex: 1; /* Allow text content to grow */
+  padding: 20px;
+}
+
+.section-heading {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.section-image {
+  max-width: 100%; /* Ensure images are responsive */
+  height: auto; /* Maintain aspect ratio */
+  flex: 1; /* Allow images to grow */
+  margin: 20px; /* Add margin around images */
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+  .mission-section,
+  .vision-section {
+      flex-direction: column; /* Stack elements on small screens */
+      text-align: center; /* Center-align text */
+  }
+
+  .mission-content {
+      order: 1; /* Show mission text first */
+  }
+
+  .section-image {
+      max-width: 90%; /* Adjust image size for mobile */
+      margin: 0 auto; /* Center images */
+  }
+
+  .vision-content {
+      order: 4; /* Show vision text last */
+  }
+
+  .vision-section {
+      flex-direction: column; /* Ensure vision section is also stacked */
+  }
+}
+
+@media (max-width: 480px) {
+  .about-heading {
+      font-size: 32px; /* Smaller heading for mobile screens */
+  }
+
+  .section-heading {
+      font-size: 20px; /* Smaller section heading for mobile */
+  }
+
+  .section-image {
+      max-width: 95%; /* Further adjust image size for mobile */
+  }
+}

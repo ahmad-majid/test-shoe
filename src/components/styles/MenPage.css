@@ -1,0 +1,153 @@
+/* MenPage.css */
+
+.men-sneaker-collection {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.sidebar {
+  flex: 1;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 8px;
+  transition: color 0.3s;
+}
+
+.category-filter {
+  margin-top: 20px;
+}
+
+.category-filter h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.category-filter label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.category-filter input[type="checkbox"] {
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.sneaker-list {
+  flex: 3;
+  padding: 20px;
+}
+
+.sneaker-list h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.sneaker-cards {
+  display: grid; /* Changed from flex to grid */
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 20px; /* Space between cards */
+}
+
+.sneaker-card {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  /* Remove hover effect */
+  transition: none; /* Disable hover effect */
+}
+
+.sneaker-card img {
+  width: 100%; /* Ensures image fills the card width */
+  height: auto; /* Maintains aspect ratio */
+  max-height: 200px; /* Set a maximum height for the images */
+  object-fit: contain; /* Adjusts the image to fit without distortion */
+}
+
+.sneaker-card .sneaker-info {
+  font-size: 14px; /* Set a consistent font size */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center text vertically */
+  text-align: center; /* Center text horizontally */
+  overflow: hidden; /* Hide overflow */
+  white-space: nowrap; /* Prevent text from wrapping */
+  text-overflow: ellipsis; /* Show ellipsis for overflow text */
+}
+
+.sneaker-card .sneaker-name {
+  font-weight: bold; /* Bold name */
+}
+
+.sneaker-card .sneaker-price {
+  color: #f37121; /* Price color */
+}
+
+/* Pagination styles remain unchanged */
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination button {
+  font-size: 16px;
+  border: 1px solid #d0d0d0;
+  padding: 5px 10px;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pagination button:hover {
+  background-color: #f37121; /* Highlight color on hover */
+  color: #fff;
+}
+
+.page-number {
+  font-size: 16px;
+  padding: 5px 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.page-number.active {
+  background-color: #f37121; /* Active page color */
+  color: #fff;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .sneaker-cards {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .sneaker-cards {
+    grid-template-columns: 1fr; /* 1 column on small screens */
+  }
+}

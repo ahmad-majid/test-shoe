@@ -1,0 +1,54 @@
+/* styles/CheckoutPage.css */
+.checkout-page {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .form-group.half-width {
+    width: 48%;
+  }
+  
+  .submit-button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    background-color: #218838;
+  }
+  
+  .back-to-cart-link {
+    display: block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+  }
+  

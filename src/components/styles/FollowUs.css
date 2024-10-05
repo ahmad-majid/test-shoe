@@ -1,0 +1,60 @@
+.follow-us {
+    text-align: center;
+    padding: 40px;
+    
+    color: white; /* Text color */
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 images per row */
+    gap: 15px; /* Space between images */
+    margin: 20px 0; /* Margin around the grid */
+}
+
+.image-item {
+    width: 100%; /* Full width */
+    height: 200px; /* Fixed height for all images */
+    overflow: hidden; /* Prevent overflow */
+    border-radius: 8px; /* Rounded corners */
+}
+
+.image-item img {
+    width: 100%; /* Responsive width */
+    height: 100%; /* Fixed height */
+    object-fit: cover; /* Ensure images cover the item area */
+}
+
+.read-more-button {
+    padding: 10px 20px;
+    background-color: black; /* Button background */
+    color: white; /* Button text color */
+    border: 2px solid white; /* Button border */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Transition for hover effect */
+}
+
+.read-more-button:hover {
+    background-color: white; /* White background on hover */
+    color: black; /* Black text on hover */
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .image-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 images per row */
+    }
+}
+
+@media (max-width: 800px) {
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 images per row */
+    }
+}
+
+@media (max-width: 500px) {
+    .image-grid {
+        grid-template-columns: 1fr; /* 1 image per row */
+    }
+}
