@@ -108,7 +108,14 @@
         flex-direction: column;
         padding: 40px 10px;
     }
-
+    
+.bgMedia {
+    DISPLAY: FLEX !important;
+}
+    .column-strip {
+        display: flex;
+        FLEX-DIRECTION: COLUMN !important;
+    }
     .grid-container {
         flex-direction: column;
     }
@@ -133,6 +140,14 @@
 @media (max-width: 480px) {
     .collection-title {
         font-size: 36px;
+    }
+    .bgMedia {
+        DISPLAY: FLEX !important;
+        position: static
+    }
+    .column-strip {
+        display: flex;
+        FLEX-DIRECTION: COLUMN !important;
     }
 
     .collection-subtitle {

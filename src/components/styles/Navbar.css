@@ -1,3 +1,4 @@
+/* Navbar Styles */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -5,33 +6,97 @@
   background-color: #fff; /* White background */
   color: #000; /* Black text color */
   padding: 10px 20px;
+  position: relative; /* Relative positioning for the mobile menu */
 }
 
+/* Responsive logo */
 .logo a {
   color: #000; /* Black text color */
   text-decoration: none;
   font-size: 1.5rem;
 }
-
+/* Mobile Menu Styles */
 .nav-links {
-  list-style-type: none;
-  display: flex;
+  display: none; /* Initially hidden */
+  flex-direction: column; /* Stack vertically on mobile */
+  position: absolute; /* Position it absolutely */
+  top: 60px; /* Below the navbar */
+  right: 0; /* Align to the right */
+  background-color: #fff; /* White background for dropdown */
+  width: 100%; /* Full width of the screen */
+  z-index: 10; /* Ensure it appears above other content */
+  padding: 20px; /* Padding for dropdown */
+  border: 1px solid #ccc; /* Optional border for styling */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: all 0.3s ease; /* Smooth transition */
 }
 
+/* When the mobile menu is active */
+.nav-links.active {
+  display: flex; /* Show the dropdown */
+}
+
+/* Individual Nav Items */
 .nav-links li {
-  margin-right: 20px;
+  margin: 10px 0; /* Margin for spacing */
 }
 
+/* Nav Link Styles */
 .nav-links li a {
   color: #000; /* Black text color */
-  text-decoration: none;
-  position: relative; /* For underline */
+  text-decoration: none; /* No underline */
+  font-size: 1.2rem; /* Slightly larger text */
+  padding: 10px 15px; /* Padding for touch targets */
+  border-radius: 5px; /* Rounded corners for hover effect */
+  transition: background-color 0.3s; /* Smooth background change */
 }
 
+/* Hover Effect for Links */
 .nav-links li a:hover {
-  color: #008000; /* Green color on hover */
+  background-color: #008000; /* Green background on hover */
+  color: #fff; /* White text on hover */
 }
 
+/* Close Button Styles */
+.close-icon {
+  width: 24px; /* Adjust size */
+  height: 24px; /* Adjust size */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Close Cart Button */
+.close-cart-button {
+  background-color: #008000; /* Green background */
+  color: #fff; /* White text */
+  padding: 10px 15px; /* Padding */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  margin-top: 10px; /* Margin above */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+/* Close Button Hover Effect */
+.close-cart-button:hover {
+  background-color: #005700; /* Darker green on hover */
+}
+
+/* View Cart Link Styles */
+.view-cart-link {
+  display: block; /* Block element for full width */
+  text-align: center; /* Centered text */
+  margin-top: 10px; /* Margin above */
+  color: #008000; /* Green text */
+  text-decoration: underline; /* Underlined */
+  transition: color 0.3s; /* Smooth color change */
+}
+
+/* Hover Effect for View Cart Link */
+.view-cart-link:hover {
+  color: #005700; /* Darker green on hover */
+}
+
+/* Contact button */
 .contact-button {
   background-color: #008000; /* Green background for contact button */
   color: #fff; /* White text color */
@@ -40,24 +105,29 @@
   text-decoration: none; /* Remove underline */
 }
 
+/* Hover effect for button */
 .contact-button:hover {
   background-color: #005700; /* Darker green on hover */
 }
 
+/* Cart styles */
 .cart-container {
   position: relative;
 }
 
+/* Cart icon container */
 .cart-icon-container {
   position: relative;
   cursor: pointer;
 }
 
+/* Cart icon */
 .cart-icon {
   width: 24px; /* Adjust as per your icon size */
   height: 24px; /* Adjust as per your icon size */
 }
 
+/* Cart count badge */
 .cart-count {
   position: absolute;
   top: -8px; /* Positioning it above the cart icon */
@@ -76,6 +146,7 @@
   z-index: 2; /* Ensure it's on top of other elements */
 }
 
+/* Cart dropdown styles */
 .cart-dropdown {
   position: absolute;
   top: 50px;
@@ -90,11 +161,7 @@
   z-index: 1;
 }
 
-.cart-dropdown p {
-  margin: 10px 0;
-  text-align: center;
-}
-
+/* Cart item styles */
 .cart-item {
   display: flex;
   align-items: center;
@@ -102,6 +169,7 @@
   border-bottom: 1px solid #eee;
 }
 
+/* Cart item image */
 .cart-item img {
   width: 50px;
   height: 50px;
@@ -109,58 +177,52 @@
   margin-right: 10px;
 }
 
-.cart-item-name {
-  font-weight: bold;
+/* Responsive styles */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hide nav links on mobile */
+    flex-direction: column; /* Stack vertically */
+    position: absolute; /* Position dropdown */
+    top: 60px; /* Below navbar */
+    right: 0;
+    background-color: #fff; /* Background color */
+    width: 100%; /* Full width */
+    z-index: 10; /* Ensure it's above other elements */
+  }
+
+  .nav-links.active {
+    display: flex; /* Show when active */
+  }
+
+  .menu-toggle {
+    display: block; /* Show menu toggle button */
+    cursor: pointer;
+  }
+
+  .navbar {
+    justify-content: space-between;
+    padding: 10px; /* Adjust padding */
+  }
 }
 
-.cart-item-price {
-  margin-top: 5px;
+/* Hide menu toggle button by default */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
 }
 
-.cart-item-count {
-  margin-top: 5px;
-  color: #666;
+.menu-toggle div {
+  height: 3px;
+  background-color: #000; /* Color of the lines */
+  border-radius: 5px; /* Rounded corners */
 }
 
-.remove-cart-item {
-  margin-top: 10px;
-  padding: 5px 10px;
-  background-color: #f00;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-}
-
-.remove-cart-item:hover {
-  background-color: #f55;
-}
-
-.close-cart-button {
-  margin-top: 10px;
-  padding: 5px 10px;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-}
-
-.close-cart-button:hover {
-  background-color: #555;
-}
-
-.view-cart-link {
-  display: block;
-  text-align: center;
-  text-decoration: none;
-  color: #333;
-  padding: 5px 0;
-  border-top: 1px solid #eee;
-}
-
-.view-cart-link:hover {
-  background-color: #f0f0f0;
-}
-
-.added-to-cart {
-  fill: red; /* Change color to red */
+/* Show the menu toggle button on mobile screens */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex; /* Show toggle button */
+  }
 }

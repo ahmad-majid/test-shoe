@@ -1,4 +1,4 @@
-import  { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import cartIcon from "../assets/images/icon-cart.svg"; // Change here
 import closeIcon from "../assets/images/icon-close.svg"; // Change here
@@ -14,6 +14,7 @@ const Navbar = ({
   const [addedToCart, setAddedToCart] = useState(false);
   const [cartItemCount, setCartItemCount] = useState(0);
   const [cartItems, setCartItems] = useState([]);
+  const [menuActive, setMenuActive] = useState(false); // State for mobile menu
 
   // Effect to update cart items and count
   useEffect(() => {
@@ -42,12 +43,22 @@ const Navbar = ({
     setTimeout(() => setAddedToCart(false), 2000); // Reset addedToCart after 2 seconds
   };
 
+  // Function to toggle mobile menu
+  const toggleMenu = () => {
+    setMenuActive(!menuActive);
+  };
+
   return (
     <nav className="navbar">
       <div className="logo">
         <Link to="/">SNEAKERS</Link>
       </div>
-      <ul className="nav-links">
+      <div className="menu-toggle" onClick={toggleMenu}>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <ul className={`nav-links ${menuActive ? "active" : ""}`}>
         <li>
           <Link to="/collection">Collections</Link>
         </li>
@@ -106,7 +117,7 @@ const Navbar = ({
                 <Link 
                   to="/cart" 
                   className="view-cart-link" 
-                  onClick={closeCart} // Close cart when navigating
+                  onClick={closeCart} // Close cart when viewing
                 >
                   View Cart
                 </Link>

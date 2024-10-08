@@ -1,10 +1,11 @@
-import React from 'react';
+
 import './styles/HeroSection.css';
 
 const HeroSection = () => {
     return (
         <section id="hero-section" className="hero-section">
-            <div className="content fade-in"> {/* Added fade-in class */}
+             {/* Left Side */}
+            <div className="content fade-in"> 
                 <div className="text-content">
                     <h1 className="hero-title">Step Into Style</h1>
                     <h6 className="hero-subtitle">Explore the Latest Trends</h6>
@@ -17,7 +18,8 @@ const HeroSection = () => {
                     />
                 </div>
             </div>
-            <div className="bgLayers">
+           {/* Right Side */}
+            <div className="bgLayers"> 
                 <div className="colorUnderlay"></div>
                 <div className="bgMedia">
                     <img
